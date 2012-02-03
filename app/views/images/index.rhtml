@@ -1,0 +1,15 @@
+
+ <%= link_to "New image", "/images/new"%>
+ <% @images.each do |i|%>
+ <table>
+        <tr>
+                <td>
+                        <%= image_tag i.kvr.url(:thumb) %>
+                </td>
+                <td>
+                        <%= link_to "download" , :controller=> "images", :action => "downloadimage", :id => i.id %>
+                </td>
+        </tr>
+ </table>
+<%end%>
+

@@ -1,0 +1,7 @@
+<%form_for @image, :url=>{:action=> "create"}, :html=> {:multipart=> "true"} do |i|%>
+       Put image url: </br>
+       <%= i.file_field :kvr%>  </br>
+       <%= i.submit "upload"%>
+
+<%end%>
+
